@@ -20,10 +20,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'black-mango': ['Black Mango', 'serif'],
 				'poppins': ['Poppins', 'sans-serif'],
+				'roboto': ['Roboto', 'sans-serif'],
 				'sans': ['Poppins', 'sans-serif'],
-				'serif': ['Black Mango', 'serif'],
+				'serif': ['Roboto', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

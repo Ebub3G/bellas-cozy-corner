@@ -61,7 +61,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-black-mango;
+    @apply font-roboto font-bold;
   }
 }
 
@@ -72,7 +72,7 @@
   }
 
   .hero-text {
-    @apply text-4xl md:text-6xl font-black-mango font-bold text-white leading-tight;
+    @apply text-4xl md:text-6xl font-roboto font-bold text-white leading-tight;
   }
 
   .hero-subtitle {
@@ -85,7 +85,7 @@
 
   /* Section Styles */
   .section-title {
-    @apply text-3xl md:text-4xl font-black-mango font-bold text-gray-800 text-center mb-4;
+    @apply text-3xl md:text-4xl font-roboto font-bold text-gray-800 text-center mb-4;
   }
 
   .section-subtitle {
@@ -98,7 +98,7 @@
   }
 
   .menu-title {
-    @apply text-xl font-black-mango font-bold text-gray-800 mb-2;
+    @apply text-xl font-roboto font-bold text-gray-800 mb-2;
   }
 
   .menu-price {
