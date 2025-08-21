@@ -1,96 +1,53 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Bella's Café Design System - Warm coffee-inspired theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm Coffee Palette */
+    --background: 45 15% 97%;
+    --foreground: 25 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 45 20% 95%;
+    --card-foreground: 25 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 45 20% 95%;
+    --popover-foreground: 25 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Coffee Brown Primary */
+    --primary: 25 40% 25%;
+    --primary-foreground: 45 25% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm Cream Secondary */
+    --secondary: 40 30% 88%;
+    --secondary-foreground: 25 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warm Accent */
+    --accent: 30 35% 82%;
+    --accent-foreground: 25 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 25 40% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom Café Colors */
+    --coffee-dark: 25 50% 20%;
+    --coffee-medium: 25 40% 35%;
+    --coffee-light: 35 30% 65%;
+    --cream: 45 25% 92%;
+    --warm-white: 45 15% 97%;
+    --accent-gold: 40 45% 75%;
   }
 }
 
@@ -100,6 +57,108 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--coffee-dark)) 0%, hsl(var(--coffee-medium)) 100%);
+  }
+
+  .hero-text {
+    @apply text-4xl md:text-6xl font-serif font-bold text-white leading-tight;
+  }
+
+  .hero-subtitle {
+    @apply text-lg md:text-xl text-white/90 font-light;
+  }
+
+  .hero-cta {
+    @apply bg-white text-gray-800 hover:bg-gray-50 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg;
+  }
+
+  /* Section Styles */
+  .section-title {
+    @apply text-3xl md:text-4xl font-serif font-bold text-gray-800 text-center mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto;
+  }
+
+  /* Menu Item Styles */
+  .menu-item {
+    @apply bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .menu-title {
+    @apply text-xl font-serif font-bold text-gray-800 mb-2;
+  }
+
+  .menu-price {
+    @apply text-lg font-bold text-gray-700;
+  }
+
+  .menu-description {
+    @apply text-gray-600 text-sm;
+  }
+
+  /* Promo Banner */
+  .promo-banner {
+    background: linear-gradient(90deg, hsl(var(--accent-gold)) 0%, hsl(var(--coffee-light)) 100%);
+  }
+
+  /* Testimonial Styles */
+  .testimonial-card {
+    @apply bg-white rounded-xl p-8 shadow-lg;
+  }
+
+  .testimonial-quote {
+    @apply text-gray-700 italic text-lg mb-4;
+  }
+
+  .testimonial-author {
+    @apply font-semibold text-gray-800;
+  }
+
+  /* Contact Styles */
+  .contact-info {
+    @apply bg-white rounded-xl p-6 shadow-lg;
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-gray-800 text-white hover:bg-gray-700 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-gray-800 border-2 border-gray-800 hover:bg-gray-800 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300;
+  }
+}
+
+/* Custom animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
