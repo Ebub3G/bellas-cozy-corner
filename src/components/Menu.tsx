@@ -1,4 +1,3 @@
-
 const Menu = () => {
   const coffeeItems = [
     {
@@ -11,7 +10,7 @@ const Menu = () => {
       name: "Vanilla Cinnamon Latte",
       description: "Smooth espresso with steamed milk, vanilla, and a hint of cinnamon",
       price: "$5.25",
-      image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300&h=200&fit=crop&crop=center"
+      image: "/lovable-uploads/3c6c5949-e3b1-4d4d-a4d5-edb28101b444.png"
     },
     {
       name: "Cold Brew Delight",
@@ -26,7 +25,7 @@ const Menu = () => {
       name: "Fresh Croissants",
       description: "Buttery, flaky pastries baked fresh every morning",
       price: "$3.50",
-      image: "https://images.unsplash.com/photo-1555507036-ab794f4ade0a?w=300&h=200&fit=crop&crop=center"
+      image: "/lovable-uploads/cd3a64ee-a8ec-4d01-919a-9ea70a0a05fa.png"
     },
     {
       name: "Blueberry Muffins",
