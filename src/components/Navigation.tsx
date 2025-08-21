@@ -1,6 +1,4 @@
 
-import { Coffee } from "lucide-react";
-
 const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,9 +9,12 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Coffee className="h-8 w-8 text-coffee-dark" />
-            <span className="text-2xl font-serif font-bold text-coffee-dark">Bella's Café</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/f3af5bd3-e182-4c9a-bbc2-37d11032a99b.png" 
+              alt="Bella's Café Logo" 
+              className="h-12 w-auto"
+            />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

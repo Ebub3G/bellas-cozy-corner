@@ -4,17 +4,20 @@ const Menu = () => {
     {
       name: "Bella's Signature Blend",
       description: "Our house special with notes of chocolate and caramel",
-      price: "$4.50"
+      price: "$4.50",
+      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&h=200&fit=crop&crop=center"
     },
     {
       name: "Vanilla Cinnamon Latte",
       description: "Smooth espresso with steamed milk, vanilla, and a hint of cinnamon",
-      price: "$5.25"
+      price: "$5.25",
+      image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300&h=200&fit=crop&crop=center"
     },
     {
       name: "Cold Brew Delight",
       description: "Slow-steeped for 12 hours, served over ice with your choice of milk",
-      price: "$4.75"
+      price: "$4.75",
+      image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300&h=200&fit=crop&crop=center"
     }
   ];
 
@@ -22,17 +25,20 @@ const Menu = () => {
     {
       name: "Fresh Croissants",
       description: "Buttery, flaky pastries baked fresh every morning",
-      price: "$3.50"
+      price: "$3.50",
+      image: "https://images.unsplash.com/photo-1555507036-ab794f4ade0a?w=300&h=200&fit=crop&crop=center"
     },
     {
       name: "Blueberry Muffins",
       description: "Made with locally sourced blueberries and a crumb topping",
-      price: "$3.25"
+      price: "$3.25",
+      image: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=300&h=200&fit=crop&crop=center"
     },
     {
       name: "Chocolate Chip Cookies",
       description: "Warm, gooey cookies perfect with your favorite coffee",
-      price: "$2.75"
+      price: "$2.75",
+      image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&h=200&fit=crop&crop=center"
     }
   ];
 
@@ -53,11 +59,20 @@ const Menu = () => {
             <div className="space-y-6">
               {coffeeItems.map((item, index) => (
                 <div key={index} className="menu-item">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="menu-title">{item.name}</h4>
-                    <span className="menu-price">{item.price}</span>
+                  <div className="flex gap-4">
+                    <img 
+                      src={item.image} 
+                      alt={item.name}
+                      className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
+                    />
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start mb-2">
+                        <h4 className="menu-title">{item.name}</h4>
+                        <span className="menu-price">{item.price}</span>
+                      </div>
+                      <p className="menu-description">{item.description}</p>
+                    </div>
                   </div>
-                  <p className="menu-description">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -69,11 +84,20 @@ const Menu = () => {
             <div className="space-y-6">
               {pastries.map((item, index) => (
                 <div key={index} className="menu-item">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="menu-title">{item.name}</h4>
-                    <span className="menu-price">{item.price}</span>
+                  <div className="flex gap-4">
+                    <img 
+                      src={item.image} 
+                      alt={item.name}
+                      className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
+                    />
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start mb-2">
+                        <h4 className="menu-title">{item.name}</h4>
+                        <span className="menu-price">{item.price}</span>
+                      </div>
+                      <p className="menu-description">{item.description}</p>
+                    </div>
                   </div>
-                  <p className="menu-description">{item.description}</p>
                 </div>
               ))}
             </div>
