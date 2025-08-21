@@ -13,7 +13,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/f3af5bd3-e182-4c9a-bbc2-37d11032a99b.png" 
               alt="Bella's Café Logo" 
-              className="h-12 w-auto"
+              className="h-24 w-auto"
             />
           </div>
           
